@@ -22,3 +22,8 @@ flash:
 	$(info Reboot the board with the jumper installed before executing this command)
 	$(info ------------------------------------------------------------------------)
 	dfu-util -a 0 -s 0x70080000 -D build/mp153/RelWithDebInfo/mp153.uimg
+
+bootloader:
+	cd bootloader/mp1-boot && make clean && make BOARD_CONF=../brainboard_p3_conf.hh
+
+.PHONY: bootloader flash clean release debug rebuild
