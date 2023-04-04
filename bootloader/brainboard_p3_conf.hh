@@ -6,7 +6,7 @@
 namespace Board
 {
 using RedLED = Led<GPIO::G, PinNum::_12, LedActive::High>;
-using GreenLED = RedLED;
+using GreenLED = Led<GPIO::A, PinNum::_9, LedActive::Low>; // D0 on mp1-p4
 using RedLED2 = RedLED;
 using GreenLED2 = GreenLED;
 
