@@ -17,7 +17,7 @@ constexpr uint32_t ConsoleUART = USART6_BASE;
 constexpr PinConf UartRX{GPIO::C, PinNum::_7, PinAF::AF_7};
 constexpr PinConf UartTX{GPIO::C, PinNum::_6, PinAF::AF_7};
 
-constexpr PinConf DFUMode{GPIO::E, PinNum::_11};
+constexpr PinConf BootSelectPin{GPIO::E, PinNum::_11};
 
 namespace NORFlash
 {
