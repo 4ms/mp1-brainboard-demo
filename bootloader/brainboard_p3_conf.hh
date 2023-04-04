@@ -13,11 +13,13 @@ using GreenLED2 = GreenLED;
 using OrangeLED = RedLED2;
 using BlueLED = GreenLED;
 
+// Pin DEBUG3
+constexpr PinConf BootSelectPin{GPIO::E, PinNum::_11};
+constexpr bool UseBootSelect = true;
+
 constexpr uint32_t ConsoleUART = USART6_BASE;
 constexpr PinConf UartRX{GPIO::C, PinNum::_7, PinAF::AF_7};
 constexpr PinConf UartTX{GPIO::C, PinNum::_6, PinAF::AF_7};
-
-constexpr PinConf BootSelectPin{GPIO::E, PinNum::_11};
 
 namespace NORFlash
 {
