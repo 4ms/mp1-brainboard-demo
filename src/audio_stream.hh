@@ -12,7 +12,6 @@ namespace Mp1BrainDemo
 {
 
 struct AudioStream {
-	// TODO: Verify this region is non-cacheable on F7
 	alignas(256) static inline
 		__attribute__((section(".noncachable"))) AudioStreamConf::AudioInBuffer audio_in_dma_buffer;
 	alignas(256) static inline

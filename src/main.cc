@@ -23,9 +23,10 @@ void main() {
 	using AudioOutBlock = AudioStreamConf::AudioOutBlock;
 
 	Controls controls;
-	// if (Board::PlayButton::PinT::read() && Board::RevButton::PinT::read()) {
-	// 	HWTests::run(controls);
-	// }
+	if (Board::ActionButton::PinT::read()) {
+		// TODO:
+		// HWTests::run(controls);
+	}
 
 	CalibrationStorage system_calibrations;
 	auto fw_version = system_calibrations.load_flash_params();
